@@ -1,0 +1,289 @@
+
+*** Running vivado
+    with args -log ADC1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ADC1_wrapper.tcl
+
+
+
+****** Vivado v2024.1.2 (64-bit)
+  **** SW Build 5164865 on Thu Sep  5 14:37:11 MDT 2024
+  **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+  **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+  **** Start of session at: Fri Nov  1 11:32:36 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ADC1_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 524.078 ; gain = 134.578
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Vivado/2024.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/utils_1/imports/synth_1/ADC1_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/utils_1/imports/synth_1/ADC1_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top ADC1_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12584
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1390.848 ; gain = 448.594
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ADC1_wrapper' [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd:30]
+INFO: [Synth 8-3491] module 'ADC1' declared at 'c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/synth/ADC1.vhd:15' bound to instance 'ADC1_i' of component 'ADC1' [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'ADC1' [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/synth/ADC1.vhd:34]
+INFO: [Synth 8-3491] module 'ADC1_Shifter_0_0' declared at 'C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/synth_1/.Xil/Vivado-37252-AxelsPC/realtime/ADC1_Shifter_0_0_stub.vhdl:6' bound to instance 'Shifter_0' of component 'ADC1_Shifter_0_0' [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/synth/ADC1.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'ADC1_Shifter_0_0' [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/synth_1/.Xil/Vivado-37252-AxelsPC/realtime/ADC1_Shifter_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'ADC1_xadc_wiz_0_0' declared at 'C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/synth_1/.Xil/Vivado-37252-AxelsPC/realtime/ADC1_xadc_wiz_0_0_stub.vhdl:6' bound to instance 'xadc_wiz_0' of component 'ADC1_xadc_wiz_0_0' [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/synth/ADC1.vhd:110]
+INFO: [Synth 8-638] synthesizing module 'ADC1_xadc_wiz_0_0' [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/synth_1/.Xil/Vivado-37252-AxelsPC/realtime/ADC1_xadc_wiz_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'ADC1_xlconstant_0_0' declared at 'c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/ip/ADC1_xlconstant_0_0/synth/ADC1_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'ADC1_xlconstant_0_0' [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/synth/ADC1.vhd:132]
+INFO: [Synth 8-6157] synthesizing module 'ADC1_xlconstant_0_0' [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/ip/ADC1_xlconstant_0_0/synth/ADC1_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant' [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant' (0#1) [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'ADC1_xlconstant_0_0' (0#1) [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/ip/ADC1_xlconstant_0_0/synth/ADC1_xlconstant_0_0.v:53]
+INFO: [Synth 8-256] done synthesizing module 'ADC1' (0#1) [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/synth/ADC1.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'ADC1_wrapper' (0#1) [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd:30]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1499.375 ; gain = 557.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1499.375 ; gain = 557.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1499.375 ; gain = 557.121
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1499.375 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/ip/ADC1_xadc_wiz_0_0/ADC1_xadc_wiz_0_0/ADC1_xadc_wiz_0_0_in_context.xdc] for cell 'ADC1_i/xadc_wiz_0'
+Finished Parsing XDC File [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/ip/ADC1_xadc_wiz_0_0/ADC1_xadc_wiz_0_0/ADC1_xadc_wiz_0_0_in_context.xdc] for cell 'ADC1_i/xadc_wiz_0'
+Parsing XDC File [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/ip/ADC1_Shifter_0_0/ADC1_Shifter_0_0/ADC1_Shifter_0_0_in_context.xdc] for cell 'ADC1_i/Shifter_0'
+Finished Parsing XDC File [c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/ip/ADC1_Shifter_0_0/ADC1_Shifter_0_0/ADC1_Shifter_0_0_in_context.xdc] for cell 'ADC1_i/Shifter_0'
+Parsing XDC File [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc]
+WARNING: [Vivado 12-584] No ports matched 'do_out[0]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'do_out[1]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'do_out[2]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'do_out[3]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'do_out[4]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'do_out[5]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'do_out[6]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'do_out[7]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'do_out[8]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'do_out[9]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'do_out[10]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'do_out[11]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'do_out[12]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'do_out[13]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'do_out[14]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'do_out[15]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'do_out[15]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'do_out[14]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'do_out[13]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'do_out[12]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'do_out[11]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'do_out[10]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'do_out[9]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'do_out[8]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'do_out[7]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'do_out[6]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'do_out[5]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'do_out[4]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'do_out[3]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'do_out[2]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'do_out[1]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'do_out[0]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[0]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[1]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[3]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[2]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[4]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[5]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[6]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[6]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[5]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[4]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[3]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[2]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[1]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'TestAdresseOUT[0]'. [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc:73]
+Finished Parsing XDC File [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/ADC1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/constrs_1/new/Vigtig_Constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ADC1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ADC1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1511.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1511.621 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for ADC1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ADC1_i/xadc_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ADC1_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ADC1_i/Shifter_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------+----------+
+|      |BlackBox name     |Instances |
++------+------------------+----------+
+|1     |ADC1_Shifter_0_0  |         1|
+|2     |ADC1_xadc_wiz_0_0 |         1|
++------+------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------+------+
+|      |Cell                   |Count |
++------+-----------------------+------+
+|1     |ADC1_Shifter_0_0_bbox  |     1|
+|2     |ADC1_xadc_wiz_0_0_bbox |     1|
+|3     |IBUF                   |     5|
+|4     |OBUF                   |    26|
++------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1511.621 ; gain = 569.367
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:23 . Memory (MB): peak = 1511.621 ; gain = 557.121
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 1511.621 ; gain = 569.367
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1511.621 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1511.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 2fb41cef
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1511.621 ; gain = 966.402
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1511.621 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/synth_1/ADC1_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file ADC1_wrapper_utilization_synth.rpt -pb ADC1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  1 11:33:19 2024...

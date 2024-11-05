@@ -1,0 +1,5 @@
+ADC1_xadc_wiz_0_0.vhd,vhdl,xil_defaultlib,../../../bd/ADC1/ip/ADC1_xadc_wiz_0_0/ADC1_xadc_wiz_0_0.vhd,
+ADC1_xlconstant_0_0.v,verilog,xil_defaultlib,../../../bd/ADC1/ip/ADC1_xlconstant_0_0/sim/ADC1_xlconstant_0_0.v,
+ADC1_Shifter_0_0.vhd,vhdl,xil_defaultlib,../../../bd/ADC1/ip/ADC1_Shifter_0_0/sim/ADC1_Shifter_0_0.vhd,
+ADC1.vhd,vhdl,xil_defaultlib,../../../bd/ADC1/sim/ADC1.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

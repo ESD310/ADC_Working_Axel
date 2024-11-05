@@ -1,0 +1,647 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (win64) Build 5164865 Thu Sep  5 14:37:11 MDT 2024
+| Date         : Fri Nov  1 11:36:26 2024
+| Host         : AxelsPC running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file ADC1_wrapper_timing_summary_routed.rpt -pb ADC1_wrapper_timing_summary_routed.pb -rpx ADC1_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : ADC1_wrapper
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                                                       Violations  
+---------  ----------------  ----------------------------------------------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell                                       1           
+CKLD-2     Warning           Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (1)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (1)
+5. checking no_input_delay (0)
+6. checking no_output_delay (19)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (1)
+------------------------
+ There is 1 register/latch pin with no clock driven by root clock pin: dclk_in (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (1)
+------------------------------------------------
+ There is 1 pin that is not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (19)
+--------------------------------
+ There are 19 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                   20          inf        0.000                      0                   20           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay            20 Endpoints
+Min Delay            20 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.115ns  (logic 4.734ns (51.935%)  route 4.381ns (48.065%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[12])
+                                                      1.214     1.214 r  ADC1_i/xadc_wiz_0/U0/DO[12]
+                         net (fo=1, routed)           4.381     5.595    d_out_OBUF[8]
+    A14                  OBUF (Prop_obuf_I_O)         3.520     9.115 r  d_out_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     9.115    d_out[8]
+    A14                                                               r  d_out[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            channel_out[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.035ns  (logic 4.799ns (53.124%)  route 4.235ns (46.876%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_CHANNEL[0])
+                                                      1.276     1.276 r  ADC1_i/xadc_wiz_0/U0/CHANNEL[0]
+                         net (fo=1, routed)           4.235     5.511    channel_out_OBUF[0]
+    W2                   OBUF (Prop_obuf_I_O)         3.523     9.035 r  channel_out_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     9.035    channel_out[0]
+    W2                                                                r  channel_out[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.032ns  (logic 4.717ns (52.226%)  route 4.315ns (47.774%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[10])
+                                                      1.214     1.214 r  ADC1_i/xadc_wiz_0/U0/DO[10]
+                         net (fo=1, routed)           4.315     5.529    d_out_OBUF[6]
+    A15                  OBUF (Prop_obuf_I_O)         3.503     9.032 r  d_out_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     9.032    d_out[6]
+    A15                                                               r  d_out[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            channel_out[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.819ns  (logic 4.789ns (54.299%)  route 4.030ns (45.701%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_CHANNEL[2])
+                                                      1.276     1.276 r  ADC1_i/xadc_wiz_0/U0/CHANNEL[2]
+                         net (fo=1, routed)           4.030     5.306    channel_out_OBUF[2]
+    T2                   OBUF (Prop_obuf_I_O)         3.513     8.819 r  channel_out_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     8.819    channel_out[2]
+    T2                                                                r  channel_out[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            channel_out[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.808ns  (logic 4.784ns (54.308%)  route 4.025ns (45.692%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_CHANNEL[1])
+                                                      1.276     1.276 r  ADC1_i/xadc_wiz_0/U0/CHANNEL[1]
+                         net (fo=1, routed)           4.025     5.301    channel_out_OBUF[1]
+    U1                   OBUF (Prop_obuf_I_O)         3.508     8.808 r  channel_out_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     8.808    channel_out[1]
+    U1                                                                r  channel_out[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.748ns  (logic 4.726ns (54.021%)  route 4.022ns (45.979%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[6])
+                                                      1.214     1.214 r  ADC1_i/xadc_wiz_0/U0/DO[6]
+                         net (fo=1, routed)           4.022     5.236    d_out_OBUF[2]
+    A16                  OBUF (Prop_obuf_I_O)         3.512     8.748 r  d_out_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     8.748    d_out[2]
+    A16                                                               r  d_out[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.739ns  (logic 4.719ns (53.998%)  route 4.020ns (46.002%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[8])
+                                                      1.214     1.214 r  ADC1_i/xadc_wiz_0/U0/DO[8]
+                         net (fo=1, routed)           4.020     5.234    d_out_OBUF[4]
+    C15                  OBUF (Prop_obuf_I_O)         3.505     8.739 r  d_out_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     8.739    d_out[4]
+    C15                                                               r  d_out[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            channel_out[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.738ns  (logic 4.787ns (54.782%)  route 3.951ns (45.218%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_CHANNEL[4])
+                                                      1.276     1.276 r  ADC1_i/xadc_wiz_0/U0/CHANNEL[4]
+                         net (fo=1, routed)           3.951     5.227    channel_out_OBUF[4]
+    R2                   OBUF (Prop_obuf_I_O)         3.511     8.738 r  channel_out_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     8.738    channel_out[4]
+    R2                                                                r  channel_out[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.704ns  (logic 4.739ns (54.446%)  route 3.965ns (45.554%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[11])
+                                                      1.214     1.214 r  ADC1_i/xadc_wiz_0/U0/DO[11]
+                         net (fo=1, routed)           3.965     5.179    d_out_OBUF[7]
+    B15                  OBUF (Prop_obuf_I_O)         3.525     8.704 r  d_out_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     8.704    d_out[7]
+    B15                                                               r  d_out[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            busy_out
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.640ns  (logic 4.813ns (55.699%)  route 3.828ns (44.301%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_BUSY)
+                                                      1.294     1.294 r  ADC1_i/xadc_wiz_0/U0/BUSY
+                         net (fo=1, routed)           3.828     5.122    busy_out_OBUF
+    R3                   OBUF (Prop_obuf_I_O)         3.519     8.640 r  busy_out_OBUF_inst/O
+                         net (fo=0)                   0.000     8.640    busy_out
+    R3                                                                r  busy_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            ADC1_i/xadc_wiz_0/U0/DEN
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.714ns  (logic 0.379ns (53.111%)  route 0.335ns (46.889%))
+  Logic Levels:           1  (XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_EOC)    0.379     0.379 r  ADC1_i/xadc_wiz_0/U0/EOC
+                         net (fo=1, routed)           0.335     0.714    ADC1_i/xadc_wiz_0/den_in
+    XADC_X0Y0            XADC                                         r  ADC1_i/xadc_wiz_0/U0/DEN
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.418ns  (logic 1.462ns (60.443%)  route 0.957ns (39.557%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[9])
+                                                      0.256     0.256 r  ADC1_i/xadc_wiz_0/U0/DO[9]
+                         net (fo=1, routed)           0.957     1.213    d_out_OBUF[5]
+    H1                   OBUF (Prop_obuf_I_O)         1.206     2.418 r  d_out_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     2.418    d_out[5]
+    H1                                                                r  d_out[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.429ns  (logic 1.467ns (60.414%)  route 0.962ns (39.586%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[7])
+                                                      0.256     0.256 r  ADC1_i/xadc_wiz_0/U0/DO[7]
+                         net (fo=1, routed)           0.962     1.218    d_out_OBUF[3]
+    K3                   OBUF (Prop_obuf_I_O)         1.211     2.429 r  d_out_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     2.429    d_out[3]
+    K3                                                                r  d_out[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[9]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.463ns  (logic 1.461ns (59.296%)  route 1.003ns (40.704%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[13])
+                                                      0.256     0.256 r  ADC1_i/xadc_wiz_0/U0/DO[13]
+                         net (fo=1, routed)           1.003     1.259    d_out_OBUF[9]
+    J3                   OBUF (Prop_obuf_I_O)         1.205     2.463 r  d_out_OBUF[9]_inst/O
+                         net (fo=0)                   0.000     2.463    d_out[9]
+    J3                                                                r  d_out[9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.463ns  (logic 1.460ns (59.285%)  route 1.003ns (40.715%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[5])
+                                                      0.256     0.256 r  ADC1_i/xadc_wiz_0/U0/DO[5]
+                         net (fo=1, routed)           1.003     1.259    d_out_OBUF[1]
+    L3                   OBUF (Prop_obuf_I_O)         1.204     2.463 r  d_out_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.463    d_out[1]
+    L3                                                                r  d_out[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            drdy_out
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.465ns  (logic 1.466ns (59.477%)  route 0.999ns (40.523%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DRDY)
+                                                      0.256     0.256 r  ADC1_i/xadc_wiz_0/U0/DRDY
+                         net (fo=1, routed)           0.999     1.255    drdy_out_OBUF
+    N2                   OBUF (Prop_obuf_I_O)         1.210     2.465 r  drdy_out_OBUF_inst/O
+                         net (fo=0)                   0.000     2.465    drdy_out
+    N2                                                                r  drdy_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.495ns  (logic 1.469ns (58.892%)  route 1.026ns (41.108%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[4])
+                                                      0.256     0.256 r  ADC1_i/xadc_wiz_0/U0/DO[4]
+                         net (fo=1, routed)           1.026     1.282    d_out_OBUF[0]
+    M3                   OBUF (Prop_obuf_I_O)         1.213     2.495 r  d_out_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.495    d_out[0]
+    M3                                                                r  d_out[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.556ns  (logic 1.464ns (57.264%)  route 1.092ns (42.736%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[15])
+                                                      0.256     0.256 r  ADC1_i/xadc_wiz_0/U0/DO[15]
+                         net (fo=1, routed)           1.092     1.348    d_out_OBUF[11]
+    K2                   OBUF (Prop_obuf_I_O)         1.208     2.556 r  d_out_OBUF[11]_inst/O
+                         net (fo=0)                   0.000     2.556    d_out[11]
+    K2                                                                r  d_out[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            d_out[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.646ns  (logic 1.462ns (55.253%)  route 1.184ns (44.747%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_DO[14])
+                                                      0.256     0.256 r  ADC1_i/xadc_wiz_0/U0/DO[14]
+                         net (fo=1, routed)           1.184     1.440    d_out_OBUF[10]
+    J1                   OBUF (Prop_obuf_I_O)         1.206     2.646 r  d_out_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     2.646    d_out[10]
+    J1                                                                r  d_out[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 ADC1_i/xadc_wiz_0/U0/DCLK
+                            (rising edge-triggered cell XADC)
+  Destination:            channel_out[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.842ns  (logic 1.492ns (52.499%)  route 1.350ns (47.501%))
+  Logic Levels:           2  (OBUF=1 XADC=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    XADC_X0Y0            XADC                         0.000     0.000 r  ADC1_i/xadc_wiz_0/U0/DCLK
+    XADC_X0Y0            XADC (Prop_xadc_DCLK_CHANNEL[3])
+                                                      0.281     0.281 r  ADC1_i/xadc_wiz_0/U0/CHANNEL[3]
+                         net (fo=1, routed)           1.350     1.631    channel_out_OBUF[3]
+    T1                   OBUF (Prop_obuf_I_O)         1.211     2.842 r  channel_out_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     2.842    channel_out[3]
+    T1                                                                r  channel_out[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

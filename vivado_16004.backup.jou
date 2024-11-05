@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.2 (64-bit)
+# SW Build 5164865 on Thu Sep  5 14:37:11 MDT 2024
+# IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+# SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+# Start of session at: Wed Oct 30 15:47:25 2024
+# Process ID: 16004
+# Current directory: C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25112 C:\Users\axelo\OneDrive\Skrivebord\ADC_AXEL2\ADC_AXEL2.xpr
+# Log file: C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/vivado.log
+# Journal file: C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2\vivado.jou
+# Running On        :AxelsPC
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-1255U
+# CPU Frequency     :2611 MHz
+# CPU Physical cores:10
+# CPU Logical cores :12
+# Host memory       :16874 MB
+# Swap memory       :6710 MB
+# Total Virtual     :23585 MB
+# Available Virtual :5933 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 8000 ns
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+add_force {/ADC1_wrapper/ADC1_i/xadc_wiz_0/convst_in} -radix hex {1 10ns} -cancel_after 20ns
+run 8000 ns
+add_force {/ADC1_wrapper/ADC1_i/xadc_wiz_0/convst_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 500000ps
+run 8000 ns
+run 8000 ns
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.ADC_CONVERSION_RATE {100} \
+  CONFIG.DCLK_FREQUENCY {12} \
+  CONFIG.TIMING_MODE {Continuous} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+delete_bd_objs [get_bd_nets xlconstant_0_dout] [get_bd_cells xlconstant_0]
+save_bd_design
+startgroup
+set_property -dict [list \
+  CONFIG.ENABLE_RESET {false} \
+  CONFIG.INTERFACE_SELECTION {Enable_AXI} \
+  CONFIG.TIMING_MODE {Event} \
+] [get_bd_cells xadc_wiz_0]
+delete_bd_objs [get_bd_nets xadc_wiz_0_eoc_out] [get_bd_nets xadc_wiz_0_drdy_out] [get_bd_nets xadc_wiz_0_do_out] [get_bd_nets dclk_in_1] [get_bd_nets xadc_wiz_0_eoc_out]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.ENABLE_RESET {true} \
+  CONFIG.INTERFACE_SELECTION {ENABLE_DRP} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+undo
+undo
+startgroup
+endgroup
+startgroup
+endgroup
+startgroup
+create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vp_Vn
+connect_bd_intf_net [get_bd_intf_pins xadc_wiz_0/Vp_Vn] [get_bd_intf_ports Vp_Vn]
+endgroup
+save_bd_design
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+close_sim

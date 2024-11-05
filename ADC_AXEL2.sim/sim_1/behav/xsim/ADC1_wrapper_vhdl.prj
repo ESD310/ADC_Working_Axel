@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ADC_AXEL2.srcs/sources_1/new/Shifter.vhd" \
+"../../../../ADC_AXEL2.ip_user_files/bd/ADC1/ip/ADC1_xadc_wiz_0_0/ADC1_xadc_wiz_0_0.vhd" \
+"../../../../ADC_AXEL2.ip_user_files/bd/ADC1/ip/ADC1_Shifter_0_0/sim/ADC1_Shifter_0_0.vhd" \
+"../../../../ADC_AXEL2.ip_user_files/bd/ADC1/sim/ADC1.vhd" \
+"../../../../ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

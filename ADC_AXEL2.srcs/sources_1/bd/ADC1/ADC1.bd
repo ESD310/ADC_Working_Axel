@@ -1,0 +1,289 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6E7AF1AD44B0FA48",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../ADC_AXEL2.gen/sources_1/bd/ADC1",
+      "name": "ADC1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xadc_wiz_0": "",
+      "xlconstant_0": "",
+      "Shifter_0": ""
+    },
+    "interface_ports": {
+      "Vaux4": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
+        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
+        "port_maps": {
+          "V_N": {
+            "physical_name": "Vaux4_v_n",
+            "direction": "I"
+          },
+          "V_P": {
+            "physical_name": "Vaux4_v_p",
+            "direction": "I"
+          }
+        }
+      },
+      "Vp_Vn": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_analog_io:1.0",
+        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0",
+        "port_maps": {
+          "V_N": {
+            "physical_name": "Vp_Vn_v_n",
+            "direction": "I"
+          },
+          "V_P": {
+            "physical_name": "Vp_Vn_v_p",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "dclk_in": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "ADC1_dclk_in",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "drdy_out": {
+        "direction": "O"
+      },
+      "busy_out": {
+        "direction": "O"
+      },
+      "channel_out": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "daddr_in": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "d_out": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      }
+    },
+    "components": {
+      "xadc_wiz_0": {
+        "vlnv": "xilinx.com:ip:xadc_wiz:3.3",
+        "ip_revision": "10",
+        "xci_name": "ADC1_xadc_wiz_0_0",
+        "xci_path": "ip\\ADC1_xadc_wiz_0_0\\ADC1_xadc_wiz_0_0.xci",
+        "inst_hier_path": "xadc_wiz_0",
+        "parameters": {
+          "ADC_CONVERSION_RATE": {
+            "value": "100"
+          },
+          "AVERAGE_ENABLE_TEMPERATURE": {
+            "value": "false"
+          },
+          "AVERAGE_ENABLE_VAUXP12_VAUXN12": {
+            "value": "false"
+          },
+          "AVERAGE_ENABLE_VAUXP4_VAUXN4": {
+            "value": "false"
+          },
+          "AVERAGE_ENABLE_VP_VN": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_TEMPERATURE": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP12_VAUXN12": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP4_VAUXN4": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VP_VN": {
+            "value": "false"
+          },
+          "DCLK_FREQUENCY": {
+            "value": "12"
+          },
+          "ENABLE_RESET": {
+            "value": "false"
+          },
+          "EXTERNAL_MUX_CHANNEL": {
+            "value": "VP_VN"
+          },
+          "INTERFACE_SELECTION": {
+            "value": "ENABLE_DRP"
+          },
+          "OT_ALARM": {
+            "value": "false"
+          },
+          "SEQUENCER_MODE": {
+            "value": "Off"
+          },
+          "SIM_FILE_NAME": {
+            "value": "design2"
+          },
+          "SIM_FILE_SEL": {
+            "value": "Default"
+          },
+          "SINGLE_CHANNEL_ACQUISITION_TIME": {
+            "value": "false"
+          },
+          "SINGLE_CHANNEL_SELECTION": {
+            "value": "VAUXP4_VAUXN4"
+          },
+          "TIMING_MODE": {
+            "value": "Continuous"
+          },
+          "USER_TEMP_ALARM": {
+            "value": "true"
+          },
+          "VCCAUX_ALARM": {
+            "value": "true"
+          },
+          "VCCINT_ALARM": {
+            "value": "true"
+          },
+          "WAVEFORM_TYPE": {
+            "value": "CONSTANT"
+          },
+          "XADC_STARUP_SELECTION": {
+            "value": "single_channel"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "ADC1_xlconstant_0_0",
+        "xci_path": "ip\\ADC1_xlconstant_0_0\\ADC1_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "20"
+          },
+          "CONST_WIDTH": {
+            "value": "7"
+          }
+        }
+      },
+      "Shifter_0": {
+        "vlnv": "xilinx.com:module_ref:Shifter:1.0",
+        "ip_revision": "1",
+        "xci_name": "ADC1_Shifter_0_0",
+        "xci_path": "ip\\ADC1_Shifter_0_0\\ADC1_Shifter_0_0.xci",
+        "inst_hier_path": "Shifter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Shifter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "d_in": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "d_out": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "Vaux4_1": {
+        "interface_ports": [
+          "xadc_wiz_0/Vaux4",
+          "Vaux4"
+        ]
+      },
+      "Vp_Vn_1": {
+        "interface_ports": [
+          "xadc_wiz_0/Vp_Vn",
+          "Vp_Vn"
+        ]
+      }
+    },
+    "nets": {
+      "Shifter_0_d_out": {
+        "ports": [
+          "Shifter_0/d_out",
+          "d_out"
+        ]
+      },
+      "dclk_in_1": {
+        "ports": [
+          "dclk_in",
+          "xadc_wiz_0/dclk_in"
+        ]
+      },
+      "xadc_wiz_0_busy_out": {
+        "ports": [
+          "xadc_wiz_0/busy_out",
+          "busy_out"
+        ]
+      },
+      "xadc_wiz_0_channel_out": {
+        "ports": [
+          "xadc_wiz_0/channel_out",
+          "channel_out"
+        ]
+      },
+      "xadc_wiz_0_do_out": {
+        "ports": [
+          "xadc_wiz_0/do_out",
+          "Shifter_0/d_in"
+        ]
+      },
+      "xadc_wiz_0_drdy_out": {
+        "ports": [
+          "xadc_wiz_0/drdy_out",
+          "drdy_out"
+        ]
+      },
+      "xadc_wiz_0_eoc_out": {
+        "ports": [
+          "xadc_wiz_0/eoc_out",
+          "xadc_wiz_0/den_in"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "xadc_wiz_0/daddr_in",
+          "daddr_in"
+        ]
+      }
+    }
+  }
+}

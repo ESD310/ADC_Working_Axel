@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.sim/sim_1/impl/func/xsim/ADC1_wrapper_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ADC1_xadc_wiz_0_0'
+INFO: [VRFC 10-3107] analyzing entity 'ADC1'
+INFO: [VRFC 10-3107] analyzing entity 'ADC1_wrapper'

@@ -1,0 +1,1143 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.2 (64-bit)
+# SW Build 5164865 on Thu Sep  5 14:37:11 MDT 2024
+# IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+# SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+# Start of session at: Thu Oct 31 08:44:32 2024
+# Process ID: 35172
+# Current directory: C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent36904 C:\Users\axelo\OneDrive\Skrivebord\ADC_AXEL2\ADC_AXEL2.xpr
+# Log file: C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/vivado.log
+# Journal file: C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2\vivado.jou
+# Running On        :AxelsPC
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-1255U
+# CPU Frequency     :2611 MHz
+# CPU Physical cores:10
+# CPU Logical cores :12
+# Host memory       :16874 MB
+# Swap memory       :6710 MB
+# Total Virtual     :23585 MB
+# Available Virtual :10188 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source xadc_wiz_0_exdes.tcl
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+export_ip_user_files -of_objects  [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd
+update_compile_order -fileset sources_1
+startgroup
+create_bd_port -dir O eos_out
+connect_bd_net [get_bd_pins /xadc_wiz_0/eos_out] [get_bd_ports eos_out]
+endgroup
+save_bd_design
+make_wrapper -files [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -top
+add_files -norecurse c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+close_sim
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 8000 ns
+run 8000 ns
+run 8000 ns
+run 8000 ns
+run 8000 ns
+run 8000 ns
+run all
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+create_bd_port -dir O busy_out
+connect_bd_net [get_bd_pins /xadc_wiz_0/busy_out] [get_bd_ports busy_out]
+endgroup
+startgroup
+create_bd_port -dir O alarm_out
+connect_bd_net [get_bd_pins /xadc_wiz_0/alarm_out] [get_bd_ports alarm_out]
+endgroup
+save_bd_design
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run all
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_0
+endgroup
+delete_bd_objs [get_bd_cells axis_broadcaster_0]
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+create_bd_port -dir I -from 6 -to 0 daddr_in
+connect_bd_net [get_bd_pins /xadc_wiz_0/daddr_in] [get_bd_ports daddr_in]
+endgroup
+save_bd_design
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+make_wrapper -files [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -top
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/daddr_in} -radix hex {0 0ns}
+run 1 ms
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+add_force {/ADC1_wrapper/daddr_in} -radix hex {1 0ns}
+run 1 ms
+add_force {/ADC1_wrapper/daddr_in} -radix hex {2 0ns}
+run 1 ms
+add_force {/ADC1_wrapper/daddr_in} -radix hex {3 0ns}
+run 1 ms
+add_force {/ADC1_wrapper/daddr_in} -radix hex {4 0ns}
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+delete_bd_objs [get_bd_nets daddr_in_1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {0.5 -270 90} [get_bd_cells xlconstant_0]
+set_property -dict [list \
+  CONFIG.CONST_VAL {30} \
+  CONFIG.CONST_WIDTH {7} \
+] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins xadc_wiz_0/daddr_in]
+startgroup
+endgroup
+save_bd_design
+make_wrapper -files [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -top
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+add_force {/ADC1_wrapper/daddr_in} -radix hex {1e 0ns}
+run 1 ms
+run 1 ms
+restart
+run 1 ms
+restart
+add_force {/ADC1_wrapper/daddr_in} -radix hex {1e 0ns}
+run 1 ms
+set_property source_mgmt_mode DisplayOnly [current_project]
+reorder_files -fileset sim_1 -after C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/design.txt
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+endgroup
+add_force {/ADC1_wrapper/daddr_in} -radix hex {1f 0ns}
+run 1 ms
+run 1 ms
+add_force {/ADC1_wrapper/ADC1_i/xadc_wiz_0/dwe_in} -radix hex {1 0ns} -cancel_after 10ns
+run 1 ms
+add_force {/ADC1_wrapper/ADC1_i/xadc_wiz_0/dwe_in} -radix hex {1 0ns} -cancel_after 100ns
+run 1 ms
+reorder_files -fileset sim_1 -after C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/design.txt
+reorder_files -fileset sim_1 -before C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/design.txt
+restart
+run 1 ms
+run 1 ms
+add_force {/ADC1_wrapper/daddr_in} -radix hex {1e 0ns}
+run 1 ms
+run 1 ms
+reset_run ADC1_xadc_wiz_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+place_ports {daddr_in[6]} V8
+place_ports {daddr_in[5]} U8
+place_ports {daddr_in[4]} W7
+place_ports {daddr_in[3]} U7
+place_ports {daddr_in[2]} U3
+place_ports {daddr_in[1]} W6
+place_ports {daddr_in[0]} U2
+set_property IOSTANDARD LVCMOS33 [get_ports [list {daddr_in[6]} {daddr_in[5]} {daddr_in[4]} {daddr_in[3]} {daddr_in[2]} {daddr_in[1]} {daddr_in[0]}]]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+delete_bd_objs [get_bd_nets xadc_wiz_0_alarm_out] [get_bd_ports alarm_out]
+delete_bd_objs [get_bd_nets xadc_wiz_0_eos_out] [get_bd_ports eos_out]
+save_bd_design
+make_wrapper -files [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -top
+generate_target all [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+place_ports busy_out R3
+set_property IOSTANDARD LVCMOS33 [get_ports [list busy_out]]
+save_constraints
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_run impl_1
+restart
+remove_forces { {/ADC1_wrapper/daddr_in} }
+run 1 ms
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+endgroup
+run 1 ms
+run 1 ms
+current_design synth_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+refresh_design
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+delete_bd_objs [get_bd_nets xlconstant_0_dout] [get_bd_cells xlconstant_0]
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+refresh_design
+place_ports {TestAdresseOUT[0]} V8
+place_ports {TestAdresseOUT[1]} U8
+place_ports {TestAdresseOUT[2]} W7
+place_ports {TestAdresseOUT[3]} U3
+startgroup
+set_property package_pin "" [get_ports [list  {TestAdresseOUT[2]}]]
+place_ports {TestAdresseOUT[4]} W7
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {TestAdresseOUT[4]}]]
+place_ports {TestAdresseOUT[2]} W7
+endgroup
+place_ports {TestAdresseOUT[4]} W6
+place_ports {TestAdresseOUT[5]} U2
+place_ports {TestAdresseOUT[6]} U5
+set_property IOSTANDARD LVCMOS33 [get_ports [list {TestAdresseOUT[6]} {TestAdresseOUT[5]} {TestAdresseOUT[4]} {TestAdresseOUT[3]} {TestAdresseOUT[2]} {TestAdresseOUT[1]} {TestAdresseOUT[0]}]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+place_ports {TestAdresseOUT[3]} U7
+place_ports {TestAdresseOUT[4]} U3
+place_ports {TestAdresseOUT[5]} W6
+place_ports {TestAdresseOUT[6]} U2
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+refresh_design
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.AVERAGE_ENABLE_TEMPERATURE {true} \
+  CONFIG.AVERAGE_ENABLE_VAUXP12_VAUXN12 {true} \
+  CONFIG.AVERAGE_ENABLE_VAUXP4_VAUXN4 {true} \
+  CONFIG.AVERAGE_ENABLE_VP_VN {true} \
+  CONFIG.CHANNEL_ENABLE_TEMPERATURE {true} \
+  CONFIG.CHANNEL_ENABLE_VAUXP12_VAUXN12 {true} \
+  CONFIG.CHANNEL_ENABLE_VAUXP4_VAUXN4 {true} \
+  CONFIG.CHANNEL_ENABLE_VP_VN {true} \
+  CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
+  CONFIG.SEQUENCER_MODE {Continuous} \
+  CONFIG.SINGLE_CHANNEL_SELECTION {VAUXP4_VAUXN4} \
+  CONFIG.USER_TEMP_ALARM {true} \
+  CONFIG.VCCAUX_ALARM {true} \
+  CONFIG.VCCINT_ALARM {true} \
+  CONFIG.XADC_STARUP_SELECTION {channel_sequencer} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+make_wrapper -files [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -top
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run all
+run all
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run all
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+connect_bd_net [get_bd_pins xadc_wiz_0/dwe_in] [get_bd_pins xadc_wiz_0/eoc_out]
+make_wrapper -files [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -top
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run all
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run all
+run all
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.AVERAGE_ENABLE_TEMPERATURE {false} \
+  CONFIG.CHANNEL_ENABLE_TEMPERATURE {false} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.AVERAGE_ENABLE_TEMPERATURE {true} \
+  CONFIG.AVERAGE_ENABLE_VP_VN {false} \
+  CONFIG.CHANNEL_ENABLE_TEMPERATURE {true} \
+  CONFIG.CHANNEL_ENABLE_VP_VN {false} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+connect_bd_net [get_bd_pins xadc_wiz_0/daddr_in] [get_bd_pins xadc_wiz_0/channel_out]
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+save_bd_design
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.AVERAGE_ENABLE_TEMPERATURE {false} \
+  CONFIG.AVERAGE_ENABLE_VAUXP12_VAUXN12 {false} \
+  CONFIG.AVERAGE_ENABLE_VAUXP4_VAUXN4 {false} \
+  CONFIG.CHANNEL_ENABLE_TEMPERATURE {false} \
+  CONFIG.CHANNEL_ENABLE_VAUXP12_VAUXN12 {false} \
+  CONFIG.CHANNEL_ENABLE_VAUXP4_VAUXN4 {false} \
+  CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
+  CONFIG.SEQUENCER_MODE {Off} \
+  CONFIG.SINGLE_CHANNEL_SELECTION {VAUXP4_VAUXN4} \
+  CONFIG.XADC_STARUP_SELECTION {single_channel} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run all
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+delete_bd_objs [get_bd_nets xadc_wiz_0_channel_out]
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+delete_bd_objs [get_bd_nets xadc_wiz_0_eoc_out]
+connect_bd_net [get_bd_pins xadc_wiz_0/den_in] [get_bd_pins xadc_wiz_0/eoc_out]
+connect_bd_net [get_bd_pins xadc_wiz_0/channel_out] [get_bd_pins xadc_wiz_0/daddr_in]
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.SIM_FILE_REL_PATH {C:\Users\axelo\OneDrive\Skrivebord\ADC_AXEL2} \
+  CONFIG.SIM_FILE_SEL {Relative_path} \
+  CONFIG.USER_TEMP_ALARM {false} \
+  CONFIG.VCCAUX_ALARM {false} \
+  CONFIG.VCCINT_ALARM {false} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+delete_bd_objs [get_bd_ports daddr_in]
+startgroup
+set_property -dict [list \
+  CONFIG.ADC_CONVERSION_RATE {100} \
+  CONFIG.DCLK_FREQUENCY {100} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+run all
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.SIM_FILE_NAME {design2} \
+  CONFIG.SIM_FILE_SEL {Relative_path_csv} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+endgroup
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+run 1 ms
+run all
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.SIM_FILE_NAME {design1} \
+  CONFIG.SIM_FILE_SEL {Default} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 50000000000000ps} -repeat_every 100000000000000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.STIMULUS_FREQ {1.0} \
+  CONFIG.WAVEFORM_TYPE {SIN} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.CHANNEL_ENABLE_TEMPERATURE {true} \
+  CONFIG.CHANNEL_ENABLE_VAUXP4_VAUXN4 {true} \
+  CONFIG.CHANNEL_ENABLE_VP_VN {true} \
+  CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
+  CONFIG.SEQUENCER_MODE {Continuous} \
+  CONFIG.SINGLE_CHANNEL_SELECTION {VAUXP4_VAUXN4} \
+  CONFIG.USER_TEMP_ALARM {true} \
+  CONFIG.VCCAUX_ALARM {true} \
+  CONFIG.VCCINT_ALARM {true} \
+  CONFIG.XADC_STARUP_SELECTION {channel_sequencer} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.SIM_FILE_NAME {design} \
+  CONFIG.STIMULUS_FREQ {1.0} \
+  CONFIG.WAVEFORM_TYPE {CONSTANT} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/design2.CSV
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property CONFIG.SIM_FILE_NAME {design2} [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.SIM_FILE_NAME {design} \
+  CONFIG.SIM_FILE_SEL {Default} \
+  CONFIG.STIMULUS_FREQ {1.0} \
+  CONFIG.WAVEFORM_TYPE {SIN} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property CONFIG.ADC_CONVERSION_RATE {1000} [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.SIM_FILE_NAME {design1} \
+  CONFIG.STIMULUS_FREQ {1.0} \
+  CONFIG.WAVEFORM_TYPE {CONSTANT} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/design1.txt
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.CHANNEL_ENABLE_TEMPERATURE {false} \
+  CONFIG.CHANNEL_ENABLE_VAUXP4_VAUXN4 {false} \
+  CONFIG.CHANNEL_ENABLE_VP_VN {false} \
+  CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
+  CONFIG.SEQUENCER_MODE {Off} \
+  CONFIG.SINGLE_CHANNEL_SELECTION {VAUXP4_VAUXN4} \
+  CONFIG.XADC_STARUP_SELECTION {single_channel} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+run 1 ms
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/design2.txt
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+set_property CONFIG.SIM_FILE_NAME {design2} [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+run 1 ms
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+delete_bd_objs [get_bd_nets xadc_wiz_0_channel_out]
+startgroup
+create_bd_port -dir O -from 4 -to 0 channel_out
+connect_bd_net [get_bd_pins /xadc_wiz_0/channel_out] [get_bd_ports channel_out]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+startgroup
+create_bd_port -dir I -from 6 -to 0 daddr_in
+connect_bd_net [get_bd_pins /xadc_wiz_0/daddr_in] [get_bd_ports daddr_in]
+endgroup
+save_bd_design
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+make_wrapper -files [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -top
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+export_ip_user_files -of_objects  [get_files c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd] -no_script -reset -force -quiet
+remove_files  c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+make_wrapper -files [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -top
+add_files -norecurse c:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.gen/sources_1/bd/ADC1/hdl/ADC1_wrapper.vhd
+startgroup
+set_property -dict [list \
+  CONFIG.ADC_CONVERSION_RATE {100} \
+  CONFIG.DCLK_FREQUENCY {12} \
+] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+delete_bd_objs [get_bd_nets daddr_in_1]
+delete_bd_objs [get_bd_ports daddr_in]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins xadc_wiz_0/daddr_in]
+startgroup
+set_property -dict [list \
+  CONFIG.CONST_VAL {20} \
+  CONFIG.CONST_WIDTH {7} \
+] [get_bd_cells xlconstant_0]
+endgroup
+create_bd_port -dir O -from 6 -to 0 daddr_in
+connect_bd_net [get_bd_ports daddr_in] [get_bd_pins xlconstant_0/dout]
+save_bd_design
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+reset_run ADC1_xadc_wiz_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+place_ports {do_out[1]} L3
+place_ports {do_out[2]} A16
+place_ports {do_out[3]} K3
+place_ports {do_out[4]} C15
+place_ports {do_out[5]} H1
+place_ports {do_out[6]} A15
+place_ports {do_out[7]} B15
+place_ports {do_out[8]} A14
+place_ports {do_out[9]} J3
+place_ports {do_out[10]} J1
+place_ports {do_out[11]} K2
+place_ports {do_out[12]} L1
+place_ports {do_out[13]} L2
+place_ports {do_out[14]} M1
+place_ports {do_out[15]} N3
+set_property package_pin "" [get_ports [list  {channel_out[4]}]]
+place_ports {channel_out[4]} R2
+place_ports {channel_out[3]} T1
+place_ports {channel_out[2]} T2
+place_ports {channel_out[1]} U1
+place_ports {channel_out[0]} W2
+set_property IOSTANDARD LVCMOS33 [get_ports [list {channel_out[4]} {channel_out[3]} {channel_out[2]} {channel_out[1]} {channel_out[0]}]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+refresh_design
+current_design impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+run 1 ms
+run 1 ms
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+file mkdir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/new
+close [ open C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/new/Shifter.vhd w ]
+add_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/new/Shifter.vhd
+set_property source_mgmt_mode All [current_project]
+create_bd_cell -type module -reference Shifter Shifter_0
+update_compile_order -fileset sources_1
+set_property location {2 431 -117} [get_bd_cells Shifter_0]
+delete_bd_objs [get_bd_nets xadc_wiz_0_do_out]
+connect_bd_net [get_bd_pins xadc_wiz_0/do_out] [get_bd_pins Shifter_0/d_in]
+connect_bd_net [get_bd_ports do_out] [get_bd_pins Shifter_0/d_out]
+delete_bd_objs [get_bd_nets Shifter_0_d_out] [get_bd_ports do_out]
+save_bd_design
+update_compile_order -fileset sources_1
+startgroup
+create_bd_port -dir O -from 12 -to 0 d_out
+connect_bd_net [get_bd_pins /Shifter_0/d_out] [get_bd_ports d_out]
+endgroup
+undo
+update_module_reference ADC1_Shifter_0_0
+startgroup
+create_bd_port -dir O -from 11 -to 0 d_out
+connect_bd_net [get_bd_pins /Shifter_0/d_out] [get_bd_ports d_out]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd] -directory C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files -ipstatic_source_dir C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/modelsim} {questa=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/questa} {riviera=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/riviera} {activehdl=C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg
+source ADC1_wrapper.tcl
+restart
+restart
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+add_force {/ADC1_wrapper/dclk_in} -radix hex {1 0ns} {0 41500ps} -repeat_every 83000ps
+run 1 ms
+run 1 ms
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+place_ports {d_out[0]} M3
+place_ports {d_out[1]} L3
+place_ports {d_out[2]} A16
+place_ports {d_out[3]} K3
+place_ports {d_out[4]} C15
+place_ports {d_out[5]} H1
+place_ports {d_out[6]} A15
+place_ports {d_out[7]} B15
+place_ports {d_out[8]} A14
+place_ports {d_out[9]} J3
+place_ports {d_out[10]} J1
+place_ports {d_out[11]} K2
+set_property IOSTANDARD LVCMOS33 [get_ports [list {d_out[11]} {d_out[10]} {d_out[9]} {d_out[8]} {d_out[7]} {d_out[6]} {d_out[5]} {d_out[4]} {d_out[3]} {d_out[2]} {d_out[1]} {d_out[0]}]]
+save_constraints
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.runs/impl_1/ADC1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC_AXEL2.srcs/sources_1/bd/ADC1/ADC1.bd}
+save_wave_config {C:/Users/axelo/OneDrive/Skrivebord/ADC_AXEL2/ADC1_wrapper_behav.wcfg}
+close_sim
